@@ -1,0 +1,7 @@
+language: python
+
+services:
+  - docker
+
+script:
+  - docker build -t yzs981130/mmdet:cuda100 .
