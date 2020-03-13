@@ -3,5 +3,7 @@ services:
 
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t yzs981130/mmdet:cuda100 .
+  - docker build -f ./Dockerfile100 -t yzs981130/mmdet:cuda100 .
+  - docker build -f ./Dockerfile101 -t yzs981130/mmdet:cuda101 .
   - docker push yzs981130/mmdet:cuda100
+  - docker push yzs981130/mmdet:cuda101
